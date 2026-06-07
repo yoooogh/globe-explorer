@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useStaticDataStore, type AttractionItem } from '../../store/staticDataStore';
+import { useStaticDataStore } from '../../store/staticDataStore';
 import { searchNearby } from '../../services/api/wikipedia';
 import type { WikiSearchResult } from '../../types/wiki';
 import './Card.css';
@@ -10,13 +10,6 @@ interface Props {
   countryName: string;
   placeName?: string;
   countryCode: string;
-}
-
-interface CombinedAttraction {
-  name: string;
-  desc: string;
-  url?: string;
-  distance?: number;
 }
 
 export function AttractionsCard({ lat, lon, countryCode, placeName }: Props) {
@@ -69,7 +62,7 @@ export function AttractionsCard({ lat, lon, countryCode, placeName }: Props) {
         {wikiAttractions.length > 0 && (
           <>
             <p style={{ fontSize: 12, color: '#667788', margin: '12px 0 4px' }}>Wikipedia 附近条目:</p>
-            {wikiAttractions.slice(0, 5).map((w, i) => (
+            {wikiAttractions.slice(0, 5).map((w) => (
               <div key={w.pageId} style={{ fontSize: 12, color: '#8899aa', padding: '3px 0' }}>
                 📍 {w.title}
               </div>
@@ -97,7 +90,7 @@ export function AttractionsCard({ lat, lon, countryCode, placeName }: Props) {
       <div className="card">
         <h3 className="card__title">🏛️ 附近景点</h3>
         <ul className="attractions-list">
-          {wikiAttractions.slice(0, 10).map((w, i) => (
+          {wikiAttractions.slice(0, 10).map((w) => (
             <li key={w.pageId}>
               <a
                 href={`https://zh.wikipedia.org/wiki/${encodeURIComponent(w.title)}`}

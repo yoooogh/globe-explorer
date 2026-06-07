@@ -7,6 +7,7 @@ interface TravelData {
     toll: number;
     fuel: number;
     total: number;
+    source?: string;
   } | null;
   train: {
     distance: number;
@@ -14,11 +15,17 @@ interface TravelData {
     secondClass: number;
     firstClass: number;
     businessClass: number;
+    searchResult?: string;
+    parsed?: any[];
+    source?: string;
   } | null;
   flight: {
-    price: string;
+    price?: string;
     time: string;
-    note: string;
+    note?: string;
+    raw?: string;
+    parsed?: any[];
+    source?: string;
   } | null;
   error?: string;
 }

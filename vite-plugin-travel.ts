@@ -122,17 +122,6 @@ interface ParsedTrip {
   tag?: string;
 }
 
-function parseRows(text: string): string[][] {
-  const lines = text.split('\n').filter(l => l.includes('|'));
-  const rows: string[][] = [];
-  for (const line of lines) {
-    if (/^[\s│|: -]+$/.test(line)) continue;
-    const cols = line.split(/[│|]/).map(c => c.trim()).filter(Boolean);
-    if (cols.length >= 2) rows.push(cols);
-  }
-  return rows;
-}
-
 function parseFlightTable(text: string): ParsedTrip[] {
   const lines = text.split('\n').filter(l => l.includes('|') && l.split('|').filter(Boolean).length >= 4);
   if (lines.length < 2) return [];

@@ -7,11 +7,6 @@ const WIKI_ENDPOINTS = [
   'https://en.wikipedia.org',
 ];
 
-const CORS_PROXIES = [
-  '',
-  'https://corsproxy.io/?',
-];
-
 interface RestSummaryResponse {
   title: string;
   extract: string;

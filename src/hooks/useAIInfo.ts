@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import type { useSelectionStore } from '../store/selectionStore';
 
 interface AIResponse {
   climate: string;

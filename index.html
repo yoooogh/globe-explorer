@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Globe Explorer - 3D 全球探索</title>
+    <style>
+      /* Prevent FOUC */
+      html, body, #root { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #0a0a1a; }
+      .initial-loader {
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        height: 100vh; color: #8899aa; font-family: system-ui, sans-serif;
+      }
+      .initial-loader .spinner {
+        width: 48px; height: 48px; border: 3px solid rgba(255,255,255,0.1);
+        border-top-color: #4fc3f7; border-radius: 50%;
+        animation: spin 1s linear infinite; margin-bottom: 16px;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="initial-loader">
+        <div class="spinner"></div>
+        <div>正在加载地球...</div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

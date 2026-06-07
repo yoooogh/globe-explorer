@@ -1,0 +1,42 @@
+.app-shell {
+  display: grid;
+  width: 100vw;
+  height: 100dvh;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-rows: 52px 1fr;
+  grid-template-columns: 1fr;
+  background: #020813;
+  color: #c8d6e5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.app-main {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-globe-area {
+  flex: 1;
+  position: relative;
+  min-width: 0;
+}
+
+/* Desktop: side panel visible */
+@media (min-width: 1024px) {
+  .app-main {
+    flex-direction: row;
+  }
+}
+
+/* Mobile and tablet: panel overlays */
+@media (max-width: 1023px) {
+  .app-main {
+    flex-direction: column;
+  }
+  .app-globe-area {
+    width: 100%;
+    height: 100%;
+  }
+}

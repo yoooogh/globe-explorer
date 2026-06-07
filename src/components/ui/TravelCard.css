@@ -1,0 +1,160 @@
+/* ─── Row icon ─── */
+.ticket-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  background: rgba(79, 195, 247, 0.12);
+  color: #4fc3f7;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.ticket-row-right {
+  text-align: right;
+  flex-shrink: 0;
+  min-width: 70px;
+}
+
+.ticket-price {
+  font-size: 17px;
+  font-weight: 700;
+  color: #4fc3f7;
+}
+
+.ticket-tag {
+  font-size: 10px;
+  color: #ff9800;
+  background: rgba(255, 152, 0, 0.1);
+  padding: 1px 5px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.ticket-footer-note {
+  padding: 8px 16px;
+  font-size: 10px;
+  color: #556677;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* ─── Ticket card wrap ─── */
+.ticket-wrap {
+  background: rgba(14, 20, 32, 0.94);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.ticket-empty {
+  padding: 24px 16px;
+  text-align: center;
+  color: #667788;
+  font-size: 13px;
+}
+
+/* Header */
+.ticket-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 16px 12px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.ticket-from { color: #4fc3f7; }
+.ticket-arrow { color: #445566; font-size: 16px; }
+.ticket-to { color: #dce6f0; }
+
+/* Section title */
+.ticket-section-title {
+  padding: 14px 16px 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #8899aa;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.ticket-sub-label {
+  padding: 6px 16px 2px;
+  font-size: 11px;
+  color: #556677;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ─── Ticket row (12306 style) ─── */
+.ticket-row {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  transition: background 0.15s;
+}
+.ticket-row:hover { background: rgba(79, 195, 247, 0.03); }
+.ticket-row:last-child { border-bottom: none; }
+
+.ticket-row-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.ticket-row-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #c8d6e5;
+  margin-bottom: 2px;
+  letter-spacing: 0.2px;
+}
+
+.ticket-row-detail {
+  font-size: 12px;
+  color: #778899;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ticket-row-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f90;
+  flex-shrink: 0;
+  min-width: 70px;
+  text-align: right;
+  padding-left: 12px;
+}
+
+/* ─── Driving ─── */
+.ticket-drive {
+  padding: 14px 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+.ticket-drive-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ticket-drive-icon { font-size: 26px; }
+.ticket-drive-time { font-size: 15px; font-weight: 600; color: #c8d6e5; }
+.ticket-drive-meta { font-size: 12px; color: #8899aa; }
+.ticket-drive-price { font-size: 16px; font-weight: 700; color: #f90; margin-left: auto; }
+.ticket-drive-sub { font-size: 11px; color: #667788; margin-top: 4px; padding-left: 36px; }
+
+/* Extra notes */
+.ticket-extra {
+  padding: 8px 16px 12px;
+  font-size: 11px;
+  color: #556677;
+  line-height: 1.5;
+  border-top: 1px dashed rgba(255, 255, 255, 0.03);
+}
